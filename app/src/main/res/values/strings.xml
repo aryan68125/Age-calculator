@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Age calculator</string>
+    <string name="enter_your_date_of_birth_here"><![CDATA[Enter your date of birth here->]]></string>
+    <string name="your_calculated_age_in_minutes">Your calculated age in minutes</string>
+    <string name="your_calculated_age_in_hours">Your calculated age in hours</string>
+    <string name="your_calculated_age_in_days">Your calculated age in days</string>
 </resources>
