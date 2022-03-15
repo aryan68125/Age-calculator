@@ -17,4 +17,10 @@ class DevActivity : AppCompatActivity() {
         var textView_info = findViewById<TextView>(R.id.textView_info)
         textView_info.setText(message)
     }
+
+    //this function will animate the dev activity when doing sliding out animation
+    override fun onBackPressed() {
+        super.onBackPressed()
+        this@DevActivity.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
 }

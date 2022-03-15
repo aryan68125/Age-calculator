@@ -4,4 +4,5 @@
     <string name="your_calculated_age_in_minutes">Your calculated age in minutes</string>
     <string name="your_calculated_age_in_hours">Your calculated age in hours</string>
     <string name="your_calculated_age_in_days">Your calculated age in days</string>
+    <string name="select_your_date_of_birth">Select your date of birth</string>
 </resources>

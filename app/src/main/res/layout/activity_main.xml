@@ -9,8 +9,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="280dp"
+        android:layout_height="255dp"
         app:cardBackgroundColor="@color/black_translucent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,39 +20,23 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="193dp">
-
-            <EditText
-                android:id="@+id/Enter_date_of_birth"
-                android:layout_width="204dp"
-                android:layout_height="46dp"
-                android:hint="your D.O.B"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="24dp"
-                app:layout_constraintBottom_toTopOf="@+id/button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.83" />
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingTop="10dp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
+                android:text="@string/select_your_date_of_birth"
                 android:textColor="@color/white"
-                android:text="@string/enter_your_date_of_birth_here"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/enter_age"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.82" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <Button
                 android:id="@+id/button"
@@ -66,9 +50,41 @@
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75" />
+                app:layout_constraintVertical_bias="0.7" />
+
+            <Button
+                android:id="@+id/select_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/capsule"
+                android:backgroundTint="@color/blue"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Select Date"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.74" />
+
+            <TextView
+                android:id="@+id/selected_date_of_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/04/1997"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -81,11 +97,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.07999998">
+        app:layout_constraintVertical_bias="0.25">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="327dp">
 
             <TextView
                 android:id="@+id/age_in_min"
@@ -108,7 +124,6 @@
                 android:id="@+id/display_age_in_minutes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-> 125364547896 minutes"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold|italic"
@@ -137,7 +152,6 @@
                 android:id="@+id/display_age_in_hours"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-> 125468795632154 hours"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="italic"
@@ -165,7 +179,6 @@
                 android:id="@+id/display_age_in_days"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-> 12345678988754 days"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold|italic"
@@ -179,7 +192,6 @@
                 android:id="@+id/display_age_in_years"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="34 Years"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
