@@ -104,14 +104,19 @@ class MainActivity : AppCompatActivity() {
             var theDate = sdf.parse(selected_date) //creating a date object from the selected date and convert it into a format that we can use into the date object
             //Making sure that the code here is null safe so that our program doesn't crash
             theDate?.let{
+                //Execute only if the theDate is not empty
+
                 //finding out how much time has passed in minutes from the selected date
                 var selectedDateInMinutes = theDate.time / 60000 //theDate.time will give us the time passed in milliseconds so we need to convert it to minutes
                 //getting the current date
                 var currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
-                var currentDateInMinutes = currentDate.time/60000
-                //calculate the difference in minutes
-                var differenceInMinutes = currentDateInMinutes - selectedDateInMinutes //how much time in minutes between those two time points
-                resultDate = differenceInMinutes.toString()
+                currentDate?.let{
+                    //execute only if the current date is not empty
+                    var currentDateInMinutes = currentDate.time/60000
+                    //calculate the difference in minutes
+                    var differenceInMinutes = currentDateInMinutes - selectedDateInMinutes //how much time in minutes between those two time points
+                    resultDate = differenceInMinutes.toString()
+                }
             }
         }, year,month,day ).show()
 
